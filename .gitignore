@@ -1,3 +1,11 @@
 .DS_Store
 dist/**
 node_modules/
+# C9
+.c9
+# WebStorm
+.idea
+# Vagrant
+.vagrant
+# Env
+.env
