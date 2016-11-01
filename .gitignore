@@ -9,3 +9,5 @@ node_modules/
 .vagrant
 # Env
 .env
+# Other
+npm-debug.log
