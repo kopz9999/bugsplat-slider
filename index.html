@@ -10,5 +10,17 @@
   <div id="main"></div>
 
   <script src="./static/bundle.js"></script>
+  <script type="text/javascript">
+    var target = document.getElementById('main');
+    bugsplatSlider.instance().addPictures([
+      {
+        url: 'https://s3-us-west-2.amazonaws.com/kopz-projects/CodersClan/BugSplat/slider/Asset+1.png',
+      },
+      {
+        url: 'https://s3-us-west-2.amazonaws.com/kopz-projects/CodersClan/BugSplat/slider/Asset+2.png'
+      }
+    ]);
+    bugsplatSlider.instance().render(target);
+  </script>
 </body>
 </html>

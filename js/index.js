@@ -1,5 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './containers/App';
+import BugsplatSlider from './utils/BugsplatSlider';
 
-ReactDOM.render(<App />, document.getElementById('main'));
+var bugsplatSlider = null;
+function instance() {
+  if (bugsplatSlider === null) bugsplatSlider = new BugsplatSlider();
+  return bugsplatSlider;
+};
+
+export {
+  BugsplatSlider,
+  instance,
+};
