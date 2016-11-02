@@ -9,14 +9,15 @@
   "dependencies": {
     "babel-core": "^6.3.15",
     "es6-promise": "^4.0.5",
-    "whatwg-fetch": "^1.0.0",
     "lodash": "^4.16.5",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
-    "redux": "^3.0.4",
     "react-redux": "^4.0.0",
+    "redux": "^3.0.4",
+    "redux-actions": "^0.13.0",
     "redux-devtools": "^2.1.5",
-    "redux-thunk": "^1.0.0"
+    "redux-thunk": "^1.0.0",
+    "whatwg-fetch": "^1.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.3.15",
