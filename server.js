@@ -17,10 +17,13 @@ app.use(require('webpack-dev-middleware')(compiler, {
 
 app.use(require('webpack-hot-middleware')(compiler));
 
-app.get('*', function(req, res) {
+app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
-  
+
+app.use('/bower_components',  express.static(__dirname + '/bower_components'));
+app.use('/assets',  express.static(__dirname + '/assets'));
+
 app.listen(3000, '0.0.0.0', function (err, result) {
   if (err) {
     console.log(err);

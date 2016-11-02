@@ -9,5 +9,7 @@ node_modules/
 .vagrant
 # Env
 .env
+# Bower
+bower_components/
 # Other
 npm-debug.log
