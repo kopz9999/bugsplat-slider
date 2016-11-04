@@ -35,7 +35,6 @@
     "eslint-plugin-react": "^3.11.3",
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.14.0",
-    "extract-text-webpack-plugin": "^1.0.1",
     "path": "^0.12.7",
     "style-loader": "^0.13.1",
     "webpack": "^1.0.0",
