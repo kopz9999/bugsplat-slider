@@ -6,3 +6,7 @@ export const TITLE_CHANGED = 'TITLE_CHANGED';
 export const REQUEST_PICTURE = 'REQUEST_PICTURE';
 export const PUSH_BACK_PICTURE = 'PUSH_BACK_PICTURE';
 export const RECEIVE_PICTURE = 'RECEIVE_PICTURE';
+export const SET_TITLE = 'SET_TITLE';
+export const SET_PARAGRAPHS = 'SET_PARAGRAPHS';
+export const SET_HREF = 'SET_HREF';
+export const SET_LINK_TEXT = 'SET_LINK_TEXT';

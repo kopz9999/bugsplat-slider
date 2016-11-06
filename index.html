@@ -49,11 +49,9 @@
       <h1>Theme example</h1>
       <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
     </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div id="main"></div>
-      </div>
-    </div>
+    <section>
+      <div id="main"></div>
+    </section>
 
     <div class="page-header">
       <h1>Buttons</h1>
@@ -613,15 +611,25 @@
   <script src="./static/bundle.js"></script>
   <script type="text/javascript">
     var target = document.getElementById('main');
-    bugsplatSlider.instance().addPictures([
-      {
-        url: 'https://s3-us-west-2.amazonaws.com/kopz-projects/CodersClan/BugSplat/slider/Asset+1.png',
-      },
-      {
-        url: 'https://s3-us-west-2.amazonaws.com/kopz-projects/CodersClan/BugSplat/slider/Asset+2.png'
-      }
-    ]);
-    bugsplatSlider.instance().render(target);
+    bugsplatSlider.instance().init({
+      pictures: [
+        {
+          url: 'https://s3-us-west-2.amazonaws.com/kopz-projects/CodersClan/BugSplat/slider/Asset+1.png',
+        },
+        {
+          url: 'https://s3-us-west-2.amazonaws.com/kopz-projects/CodersClan/BugSplat/slider/Asset+2.png'
+        }
+      ],
+      title: 'Powered by BugSplat',
+      paragraphs: [
+        'With the BugSplat seal of approval, your users will know you take crashes and stability seriously',
+        'Some of the video game on the planet are developed and supported with BugSplat',
+        'Why not yours?'
+      ],
+      href: 'https://askaig.bugsplat.com/video-game-crash/',
+      linkText: 'Customizing your crash box',
+      node: target,
+    });
   </script>
 </body>
 </html>

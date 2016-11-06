@@ -1,6 +1,6 @@
 import React from 'react';
 import {Provider} from 'react-redux';
-import Home from '../components/Home';
+import LabelBox from '../components/LabelBox';
 
 export default class App extends React.Component {
   static propTypes = {
@@ -10,11 +10,16 @@ export default class App extends React.Component {
   render() {
     const { store }  = this.props;
     return (
-      <div>
-        <Provider store={store}>
-          <Home />
-        </Provider>
-      </div>
+      <Provider store={store}>
+        <div className="row">
+          <div className="col-xs-6">
+
+          </div>
+          <div className="col-xs-6">
+            <LabelBox />
+          </div>
+        </div>
+      </Provider>
     );
   }
 };
