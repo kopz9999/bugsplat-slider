@@ -1,6 +1,7 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import LabelBox from '../components/LabelBox';
+import Slider from '../components/Slider';
 
 export default class App extends React.Component {
   static propTypes = {
@@ -13,7 +14,7 @@ export default class App extends React.Component {
       <Provider store={store}>
         <div className="row">
           <div className="col-xs-6">
-
+            <Slider />
           </div>
           <div className="col-xs-6">
             <LabelBox />

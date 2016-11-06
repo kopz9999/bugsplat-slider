@@ -18,7 +18,8 @@ export default function(state = defaultState, action) {
   switch (type) {
     case PUSH_BACK_PICTURE:
       var pictureCards = [...state.pictureCards];
-      pictureCards.unshift(pictureCards.pop());
+      // pictureCards.unshift(pictureCards.pop());
+      pictureCards.push(pictureCards.shift());
       return {
         ...state,
         pictureCards

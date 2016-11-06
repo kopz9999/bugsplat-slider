@@ -1,4 +1,4 @@
-class Picture {
+export class Picture {
   constructor({id, url, description}) {
     this.id = id;
     this.url = url;
