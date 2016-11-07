@@ -8,11 +8,12 @@ import * as AppActions from '../actions/AppActions';
 class Slider extends Component {
   onLoadImage = (e) => {
     let img = e.target;
-    if (img.width > this.state.maxWidth) {
-      this.setState({ maxWidth: img.width })
+    const { naturalWidth: width, naturalHeight: height } = img;
+    if (width > this.state.maxWidth) {
+      this.setState({ maxWidth: width })
     }
-    if (img.height > this.state.maxHeight) {
-      this.setState({ maxHeight: img.height })
+    if (height > this.state.maxHeight) {
+      this.setState({ maxHeight: height })
     }
   };
 
