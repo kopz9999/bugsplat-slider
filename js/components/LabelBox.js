@@ -1,19 +1,22 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import styles from './LabelBox.css';
 
 class LabelBox extends Component {
   render() {
     const {title, paragraphs, href, linkText} = this.props;
 
     return (
-      <div>
+      <div className={styles.labelBox}>
         <h2>{title}</h2>
         <div>
           { paragraphs.map((par, i) => <p key={i}>{par}</p>) }
         </div>
-        <a className={['btn','btn-primary'].join(' ')} href={href}>
-          {linkText}
-        </a>
+        <div className={styles.buttonBar}>
+          <a className={['btn','btn-primary'].join(' ')} href={href}>
+            {linkText}
+          </a>
+        </div>
       </div>
     );
   }
