@@ -10,3 +10,5 @@ export const SET_TITLE = 'SET_TITLE';
 export const SET_PARAGRAPHS = 'SET_PARAGRAPHS';
 export const SET_HREF = 'SET_HREF';
 export const SET_LINK_TEXT = 'SET_LINK_TEXT';
+export const SET_CHANGE_INTERVAL = 'SET_CHANGE_INTERVAL';
+export const SET_ENTER_TIMEOUT = 'SET_ENTER_TIMEOUT';

@@ -4,6 +4,8 @@ import {SET_TITLE} from "../constants/ActionTypes";
 import {SET_PARAGRAPHS} from "../constants/ActionTypes";
 import {SET_HREF} from "../constants/ActionTypes";
 import {SET_LINK_TEXT} from "../constants/ActionTypes";
+import {SET_CHANGE_INTERVAL} from "../constants/ActionTypes";
+import {SET_ENTER_TIMEOUT} from "../constants/ActionTypes";
 
 let defaultState = {
   pictureCards: [],
@@ -11,6 +13,8 @@ let defaultState = {
   paragraphs: [],
   href: '',
   linkText: '',
+  changeInterval: 5000,
+  enterTimeout: 1000,
 };
 
 export default function(state = defaultState, action) {
@@ -51,6 +55,16 @@ export default function(state = defaultState, action) {
       return {
         ...state,
         linkText: payload.linkText
+      };
+    case SET_CHANGE_INTERVAL:
+      return {
+        ...state,
+        changeInterval: payload.changeInterval
+      };
+    case SET_ENTER_TIMEOUT:
+      return {
+        ...state,
+        enterTimeout: payload.enterTimeout
       };
     default:
       return state;

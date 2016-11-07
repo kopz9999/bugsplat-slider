@@ -17,12 +17,12 @@ class Slider extends Component {
   };
 
   hideLastPicture = () => {
-    const { pictureCards } = this.props;
+    const { pictureCards, enterTimeout } = this.props;
     const lastPictureComponent =
       this.refs[pictureCards[pictureCards.length - 1].id];
     lastPictureComponent.slideOut().then(()=> {
       this.props.pushBackPicture();
-      lastPictureComponent.slideIn();
+      setTimeout(()=> lastPictureComponent.slideIn(), enterTimeout);
     });
   };
 
@@ -31,7 +31,7 @@ class Slider extends Component {
     this.state = {
       maxWidth: 0,
       maxHeight: 0,
-      intervalId: setInterval(this.hideLastPicture, 5000)
+      intervalId: setInterval(this.hideLastPicture, props.changeInterval)
     };
   }
 

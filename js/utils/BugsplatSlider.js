@@ -8,6 +8,8 @@ import {setTitle} from "../actions/AppActions";
 import {setHref} from "../actions/AppActions";
 import {setParagraphs} from "../actions/AppActions";
 import {setLinkText} from "../actions/AppActions";
+import {setChangeInterval} from "../actions/AppActions";
+import {setEnterTimeout} from "../actions/AppActions";
 
 export default class BugsplatSlider {
   constructor() {
@@ -29,12 +31,15 @@ export default class BugsplatSlider {
     );
   }
 
-  init({pictures, title, paragraphs, href, linkText, node}) {
+  init({pictures, title, paragraphs, href, linkText, node,
+        changeInterval, enterTimeout}) {
     this.addPictures(pictures);
-    this.store.dispatch(setTitle({ title }));
-    this.store.dispatch(setParagraphs({ paragraphs }));
-    this.store.dispatch(setHref({ href }));
-    this.store.dispatch(setLinkText({ linkText }));
+    if(title) this.store.dispatch(setTitle({ title }));
+    if (paragraphs) this.store.dispatch(setParagraphs({ paragraphs }));
+    if (href) this.store.dispatch(setHref({ href }));
+    if (linkText) this.store.dispatch(setLinkText({ linkText }));
+    if (changeInterval) this.store.dispatch(setChangeInterval({ changeInterval }));
+    if (enterTimeout) this.store.dispatch(setEnterTimeout({ enterTimeout }));
     this.render(node);
   }
 

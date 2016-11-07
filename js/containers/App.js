@@ -13,10 +13,10 @@ export default class App extends React.Component {
     return (
       <Provider store={store}>
         <div className="row">
-          <div className="col-xs-6">
+          <div className="col-md-6">
             <Slider />
           </div>
-          <div className="col-xs-6">
+          <div className="col-md-6">
             <LabelBox />
           </div>
         </div>
