@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "scripts": {
     "start": "DEBUG=true node server.js",
-    "build": "webpack -p --config webpack/webpack.production.js",
-    "build-dev": "webpack -p"
+    "build": "NODE_ENV=production webpack -p --config webpack/webpack.production.js --progress --colors",
+    "aws": "aws s3 sync dist/ s3://kopz-projects/CodersClan/BugSplat/slider/ --acl public-read",
+    "build-dev": "webpack -p",
+    "deploy": "npm run build && npm run aws"
   },
   "dependencies": {
     "babel-core": "^6.3.15",
