@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import styles from './LabelBox.css';
+import thunder from './images/thunder.png';
 
 class LabelBox extends Component {
   render() {
@@ -8,7 +9,10 @@ class LabelBox extends Component {
 
     return (
       <div className={styles.labelBox}>
-        <h2>{title}</h2>
+        <header>
+          <h2>{title}</h2>
+          <img src={thunder} />
+        </header>
         <div>
           { paragraphs.map((par, i) => <p key={i}>{par}</p>) }
         </div>
